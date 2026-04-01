@@ -16,7 +16,44 @@ Include:
 - What you will not compromise on
 -->
 
-*To be completed.*
+Theme / Concept:
+
+A vibrant digital multiverse where identity is expressed through stylized avatars, blending playful creativity with sleek, futuristic energy. Each faction represents a different emotional aesthetic: bold, soft, or hyper-digital.
+
+Three Factions:
+
+Edgy / Streetwear —
+Neon-lit rebels with bold gradients, holographic textures, and expressive avatars. Glowing UI frames, and confident, high-contrast visuals.
+
+Soft / Cottagecore —
+Dreamy, pastel-toned characters in a whimsical, cozy world. Rounded UI, soft shadows, plush mascots, and gentle storytelling elements.
+
+Futuristic / Cyber —
+Sleek, abstract, and high-tech. Floating geometry, glassmorphism, deep-space gradients, and luminous accents that feel almost alien.
+
+Color Palette
+Background: #0B0B12 
+Streetwear accent: #FF2E9A 
+Cottagecore accent: #CBA6F7 
+Cyber accent: #5B8CFF 
+Text: #F5F5F7 
+Typography
+Headers: Bold, futuristic sans-serif (e.g. Space Grotesk, Satoshi, Clash Display)
+Body: Clean, modern sans-serif (e.g. Inter, SF Pro, DM Sans)
+Hover Behavior
+Hovered avatar expands slightly with a soft glow halo
+Neighboring avatars subtly shrink and dim
+Background gradient shifts toward the hovered avatar’s faction color
+UI elements gain a slight glassy blur + neon edge highlight
+
+Transition speed: Fast but smooth (snappy with slight easing, ~200–300ms)
+
+Mood in one sentence
+
+Playful yet polished: a dreamy, neon-infused digital playground where personality, emotion, and aesthetic identity come alive.
+
+What will you not compromise on?
+The background must always stay #0B0B12 
 
 ---
 
