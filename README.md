@@ -32,7 +32,7 @@ Futuristic / Cyber —
 Sleek, abstract, and high-tech. Floating geometry, glassmorphism, deep-space gradients, and luminous accents that feel almost alien.
 
 Color Palette
-Background: #0B0B12 
+Change from #0B0B12 to something like #C4B5F4 to #E8B8E8 (soft purple to pink gradient)
 Streetwear accent: #FF2E9A 
 Cottagecore accent: #CBA6F7 
 Cyber accent: #5B8CFF 
@@ -53,7 +53,7 @@ Mood in one sentence
 Playful yet polished: a dreamy, neon-infused digital playground where personality, emotion, and aesthetic identity come alive.
 
 What will you not compromise on?
-The background must always stay #0B0B12 
+The background must always stay within the soft purple palette — no pure black or harsh dark modes
 
 ---
 
