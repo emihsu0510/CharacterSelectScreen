@@ -63,12 +63,23 @@ System flow — what receives input, how the system processes it, what it output
 
 ```mermaid
 flowchart TD
-    A[User hovers over faction card] --> B[React state updates activefaction]
-    B --> C[CSS variables / class changes applied]
-    C --> D[Background color transitions]
-    C --> E[Typography shifts]
-    C --> F[Inactive cards fade/recede]
-    D & E & F --> G[Unified atmospheric output rendered to user]
+    A[Page Loads] --> B[Title slides in from left — 1.6s animation]
+    A --> C[Characters slide in from right — marquee begins]
+    C --> D[Characters loop continuously in marquee]
+
+    D --> E{User hovers over a character}
+    E --> F[React state updates activeKey]
+    F --> G[Marquee pauses]
+    F --> H[Hovered card scales up + lifts]
+    F --> I[Card glow intensifies behind character]
+    F --> J[Inactive cards fade to 0.6 opacity]
+    F --> K[Title text changes to faction name]
+    F --> L[Subtitle updates to faction descriptor]
+    F --> M[Background glow shifts to faction color]
+
+    G & H & I & J & K & L & M --> N[Unified atmospheric output rendered to user]
+
+    E --> |User moves away| O[State resets — marquee resumes — all cards return to default]
 ```
 
 ---
