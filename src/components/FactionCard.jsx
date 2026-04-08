@@ -109,14 +109,15 @@ function FactionCard({ faction, index, isActive, isInactive, onHover, onLeave })
           {faction.label}
         </h2>
         <p style={{
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 300,
+          fontFamily: "'Space Grotesk', sans-serif",
+          fontWeight: 400,
           fontSize: '0.75rem',
-          letterSpacing: '0.1em',
-          color: 'rgba(45,27,94,0.6)',
+          letterSpacing: '0.2em',
+          textTransform: 'uppercase',
+          color: 'rgba(45,27,94,0.5)',
           marginTop: '0.4rem',
         }}>
-          {faction.subtitle}
+          {faction.descriptor}
         </p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import FactionCard from './components/FactionCard'
 import streetwearImg from '../designs/Vanta_002.png'
 import cyberpunkImg from '../designs/Cyberpunk_V003.png'
@@ -10,7 +10,8 @@ const factions = [
   {
     id: 'nova',
     label: 'Nova',
-    subtitle: 'Bold / Futuristic',
+    subtitle: `"You arrive before the trend does."`,
+    descriptor: 'Bold / Futuristic',
     accent: '#5B8CFF',
     glow: 'rgba(91, 140, 255, 0.25)',
     image: cyberpunkImg,
@@ -18,7 +19,8 @@ const factions = [
   {
     id: 'muse',
     label: 'Muse',
-    subtitle: 'Expressive / Street',
+    subtitle: '"You are the reference."',
+    descriptor: 'Expressive / Street',
     accent: '#CBA6F7',
     glow: 'rgba(203, 166, 247, 0.25)',
     image: chicImg,
@@ -26,7 +28,8 @@ const factions = [
   {
     id: 'aera',
     label: 'Aera',
-    subtitle: 'Soft / Effortless',
+    subtitle: '"Nothing extra. Nothing missing."',
+    descriptor: 'Soft / Effortless',
     accent: '#AEEBFF',
     glow: 'rgba(174, 235, 255, 0.25)',
     image: casualImg,
@@ -34,24 +37,18 @@ const factions = [
   {
     id: 'vanta',
     label: 'Vanta',
-    subtitle: 'Dark / Sharp',
-    accent: '#2B2B2B',
-    glow: 'rgba(43, 43, 43, 0.35)',
+    subtitle: `"You don't enter rooms. You take them."`,
+    descriptor: 'Dark / Sharp',
+    accent: '#AAAAAA',
+    glow: 'rgba(150, 150, 150, 0.25)',
     image: streetwearImg,
   },
 ]
 
 function App() {
   const [activeKey, setActiveKey] = useState(null)
-  const [marqueeReady, setMarqueeReady] = useState(false)
   const activeFaction = activeKey ? activeKey.split('-')[0] : null
   const activeData = factions.find(f => f.id === activeFaction)
-
-  useEffect(() => {
-    // 18s animation with -7s head start = 11s until it finishes
-    const marqueeTimer = setTimeout(() => setMarqueeReady(true), 1600 + 30000)
-    return () => clearTimeout(marqueeTimer)
-  }, [])
 
   return (
     <div style={{
@@ -117,13 +114,13 @@ function App() {
       </header>
 
       {/* Cards */}
-      <div className="container-slide" style={{
+      <div style={{
         position: 'absolute',
         inset: 0,
         overflow: 'hidden',
         zIndex: 1,
       }}>
-        <div className={marqueeReady ? 'card-track' : ''} style={{ display: 'flex', height: '100%' }}>
+        <div className="card-track" style={{ display: 'flex', height: '100%' }}>
           {[...factions, ...factions].map((faction, index) => (
             <FactionCard
               key={`${faction.id}-${index}`}
